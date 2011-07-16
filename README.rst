@@ -10,7 +10,7 @@ Create virtual environment::
     virtualenv <virtualenv path>
 
 
-Create local settings::
+Create local settings(see local_settings.py.def)::
 
 - `local_settings.py`
 

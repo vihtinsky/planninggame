@@ -9,4 +9,4 @@
 *.db
 *.log
 ve/*
-
+local_settings.py
