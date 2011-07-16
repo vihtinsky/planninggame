@@ -1,5 +1,6 @@
 import db
 import settings
+from teams import Team
 
 
 class User(object):
@@ -37,3 +38,8 @@ class User(object):
 
     def __check_admin(self):
         return  self.cli.get(self.admin_key)!=None
+
+    def get_teams(self):
+        #TODO Realisation of teams
+        """Returns teams users belongs to )"""
+        return [Team('teamf')]

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="box">
+<h2>{{team.name.title()}}</h2>
+<h3><a href="{{estimate.link}}">{{estimate.title}}</a></h3>
+    {{estimate.text}}
+</div>
+<div class="box people">
+<div class="player">
+    Ilya Vihtinsky
+</div>
+<div class="player">
+    Ilya Vihtinsky
+</div>
+</div>
+<div class="box field">
+</div>
+<div style="clear:both"></div>
+<div id="my_cards" class="box">
+{% for card in cards %}
+<div class="card" n="{{loop.index0}} "card="{{card}}" style="z-index:{{loop.index0}}" href="#">
+
+{% if card == 'coffee' %}
+    <img src="{{ url_for('static', filename='images/coffee.png')}}"/>
+{% else %}
+    {{card}}
+{% endif %}
+</div>
+
+{% endfor %}
+</div>
+<script  type="text/javascript">
+$('.card').mouseover(function(){
+     $(this).css("z-index",100)
+     $(this).addClass('card-hover')
+})
+$('.card').mouseout(function(){
+    $(this).css("z-index",$(this).attr("n"))
+    $(this).removeClass('card-hover')
+})
+</script>
+{% endblock %}
+

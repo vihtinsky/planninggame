@@ -1,14 +1,21 @@
 {% extends "layout.html" %}
+{% block flash %}
+{% endblock %}
 {% block body %}
+
+
+<div class="login-form ui-corner-all ui-widget">
 <h2>Login</h2>
-{% if error %}<p class="error"><strong>Error:</strong> {{ error }}{% endif %}
+{% for message in get_flashed_messages() %}
+    <div class="ui-state-error">{{ message }}</div>
+{% endfor %}
 <form action="{{ url_for('login') }}" method="post">
-<dl>
-<dt>Username:
-<dd><input type="text" name="username">
-<dd><input type="password" name="password">
-<dd><input type="submit" value="Login">
-</dl>
+<label for="username">Username:</label>
+<input type="text" value="{{username}}" name="username">
+<label for="password">Password:</label>
+<input type="password" name="password">
+<input type="submit" value="Login">
 </form>
+</div>
 {% endblock %}
 

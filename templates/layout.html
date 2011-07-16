@@ -1,19 +1,32 @@
-<!doctype html>
+<html>
+<head>
 <title>Planning Game</title>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-<div class=page>
+<link rel=stylesheet type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+
+<link rel=stylesheet type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/smoothness/jquery-ui.css"/>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"></script>
+</head>
+<body>
+<div class="page">
+<div id="header">
 <h1>Planning Game</h1>
-<div class=metanav>
+</div>
+<div id="top-menu">
 {% if session.is_admin %}
-<a href="">Add Team</a>
+<a href="">Admin</a>
 {% endif %}
 {% if session.user %}
-<a href="{{ url_for('logout') }}">Log Out</a>
+<a href="/">Home</a>
+<a class="logout" href="{{ url_for('logout') }}">Log Out</a>
 {% endif %}
 </div>
+{% block flash %}
 {% for message in get_flashed_messages() %}
-<div class=flash>{{ message }}</div>
+    <div class=flash>{{ message }}</div>
 {% endfor %}
+{% endblock %}
 {% block body %}{% endblock %}
 </div>
-
+</body>
+</html>

@@ -17,3 +17,8 @@ def check_auth(username, password):
     user = User(username, ph)
     return user.login()
 
+def get_user():
+    if session.get("user"):
+        return User(session.get("user"))
+    else:
+        return None

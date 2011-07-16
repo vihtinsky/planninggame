@@ -1,0 +1,90 @@
+.login-form {
+    border:solid 1px #000;
+    padding:15px;
+    width:270px;
+    margin:auto;
+    margin-top:10px;
+}
+.page {
+    width:1000px;
+    margin:auto;
+}
+
+#header {
+    background-color: #507AAA;
+    color: #F8F8F8;
+    height: 5.3em;
+    margin: 0;
+    padding: 4px 8px 0 6px;
+    position: relative;
+}
+
+#top-menu {
+    background-attachment: scroll;
+    background-color: rgb(44, 64, 86);
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    color: rgb(255, 255, 255);
+    font-size: 0.8em;
+    height: 1.8em;
+    padding-bottom: 0px;
+    padding-left: 6px;
+    padding-right: 2px;
+    padding-top: 2px;
+}
+#top-menu a{
+    color: #FFF;
+    margin: 0 5px;
+}
+
+a.logout {
+    float:right;
+    width:100px;
+    height:16px;
+}
+
+.box {
+    margin:5px;
+    background-color: #F6F6F6;
+    border: 1px solid #E4E4E4;
+    color: #505050;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    padding: 6px;
+}
+
+.field {
+    width:800px;
+    background-color: #FFF;
+    float:left;
+    height:350px;
+}
+
+.people {
+    width:150px;
+    float:left;
+    height:350px;
+}
+#my_cards{
+    height:180px;
+}
+.card {
+    position:relative;
+    padding-top:50px;
+    overflow: hidden;
+    margin-right:-35px;
+    width:96px;
+    height:100px;
+    text-align:center;
+    font-size:45px;
+    border: 2px solid #000;
+    background:#fcfbe7;
+    float:left;
+    color: #505050;
+    text-decoration:none;
+    cursor:pointer;
+}
+.card-hover {
+    background:#FFF;
+}
+

@@ -1,8 +1,8 @@
 {% extends "layout.html" %}
 {% block body %}
-<h2>Estimates</h2>
-{% for estimate in estimates %}
-    {{estimate}}
+<h2>Teams</h2>
+{% for team in teams %}
+    <a href="{{ url_for('team', team=team.name) }}">{{team.name}}</a>
 {% endfor %}
 {% endblock %}
 
