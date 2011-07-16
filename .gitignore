@@ -1,0 +1,12 @@
+*.*~
+*.bak
+*.orig
+*.pyc
+*.pyo
+*.swo
+*.swp
+*.vim
+*.db
+*.log
+ve/*
+
